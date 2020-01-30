@@ -1,42 +1,41 @@
 import React, { useReducer } from 'react';
 
-import mainContext from './MainContext';
+import MainContext from './MainContext';
 import MainReducer from './MainReducer';
 
-//import { SET_ALERT } from '../types';
+import { TOGGLE_NAVIGATION, CHANGE_LANGUAGE } from '../types';
 
 const MainState = props => {
 	const initialState = {
-		text: 'labas',
+		isNavOpen: false,
+		language: 'lt',
 	};
 	const [state, dispatch] = useReducer(MainReducer, initialState);
 
-	// const setAlert = (msg, type, timeout = 5000) => {
-	// 	const id = uuid.v4();
-	// 	dispatch({
-	// 		type: SET_ALERT,
-	// 		payload: { msg, type, id },
-	// 	});
+	const changeLanguage = lang => {
+		dispatch({
+			type: CHANGE_LANGUAGE,
+			payload: lang,
+		});
+	};
 
-	// 	setTimeout(
-	// 		() =>
-	// 			dispatch({
-	// 				type: REMOVE_ALERT,
-	// 				payload: id,
-	// 			}),
-	// 		timeout,
-	// 	);
-	// };
+	const toggleNav = () => {
+		dispatch({
+			type: TOGGLE_NAVIGATION,
+		});
+	};
 
 	return (
-		<mainContext.Provider
+		<MainContext.Provider
 			value={{
-				text: state.text,
-				// setAlert,
+				isNavOpen: state.isNavOpen,
+				language: state.language,
+				changeLanguage,
+				toggleNav,
 			}}
 		>
 			{props.children}
-		</mainContext.Provider>
+		</MainContext.Provider>
 	);
 };
 
