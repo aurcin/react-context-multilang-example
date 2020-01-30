@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './footer.css';
+
 const Footer = props => {
-	return <div>this is footer</div>;
+	return <footer className='block red'>this is footer</footer>;
 };
 
 Footer.propTypes = {};

@@ -1,0 +1,42 @@
+:root {
+	box-sizing: border-box;
+	font-size: calc(1vw + 0.6em);
+
+	--color-main: #e64b4b;
+
+	--color-second: whitesmoke;
+	--color-second-dark: #8e7979;
+}
+
+@media (min-width: 48em) {
+	:root {
+		font-size: 1.125em;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+.block {
+	margin: 1em;
+	padding: 1em;
+
+	border-radius: 1em;
+}
+
+.red {
+	color: var(--color-second);
+	background-color: var(--color-main);
+}

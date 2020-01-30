@@ -7,11 +7,11 @@ import Home from './pages/home';
 import About from './pages/about';
 import Portfolio from './pages/portfolio';
 
-import MainState from '../context/main/MainState';
+import Languagestate from '../context/language/LanguageState';
 
 const App = () => {
 	return (
-		<MainState>
+		<Languagestate>
 			<Router>
 				<Header />
 				<div className='container'>
@@ -23,7 +23,7 @@ const App = () => {
 				</div>
 				<Footer />
 			</Router>
-		</MainState>
+		</Languagestate>
 	);
 };
 
