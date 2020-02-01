@@ -8,7 +8,6 @@ import { dictionaryList, languageOptions } from '../../languages/languages';
 
 const LanguageState = props => {
 	const initialState = {
-		isNavOpen: true,
 		language: languageOptions[0],
 		dictionary: dictionaryList[languageOptions[0].id],
 	};

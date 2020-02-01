@@ -1,10 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
+import './about.css';
+import Text from '../../components/text';
 
 const About = props => {
-	return <div>this is About</div>;
+	return (
+		<>
+			<h2>
+				<Text tid='about.h' />
+			</h2>
+			<p>
+				<Text tid='about.p1' />
+			</p>
+			<p>
+				<Text tid='about.p2' />
+			</p>
+		</>
+	);
 };
-
-About.propTypes = {};
 
 export default About;

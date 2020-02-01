@@ -1,0 +1,8 @@
+.container h1 {
+	text-align: center;
+	margin: 1em auto 2em;
+}
+
+.container p {
+	margin: 0.5em;
+}

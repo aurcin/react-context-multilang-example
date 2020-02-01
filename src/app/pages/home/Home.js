@@ -1,10 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
+import './home.css';
+import Text from '../../components/text';
 
 const Home = props => {
-	return <div>this is Home</div>;
+	return (
+		<>
+			<h1>
+				<Text tid='home.h1' />
+			</h1>
+			<p>
+				<Text tid='home.p' />
+			</p>
+		</>
+	);
 };
-
-Home.propTypes = {};
 
 export default Home;

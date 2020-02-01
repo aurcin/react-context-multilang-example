@@ -1,12 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import './footer.css';
 
-const Footer = props => {
-	return <footer className='block red'>this is footer</footer>;
-};
+import Text from '../text';
 
-Footer.propTypes = {};
+const Footer = () => {
+	return (
+		<footer className='block red'>
+			<span>
+				<Text tid='footer' />
+			</span>
+		</footer>
+	);
+};
 
 export default Footer;
